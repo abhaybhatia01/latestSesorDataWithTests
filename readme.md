@@ -97,38 +97,3 @@ npm run test
 ```
 
    
-   The tests validate the following aspects mentioned in the API documentation.
-   ## user testing 
-   1. User Registration: 
-      - Tests are performed to check for errors when creating a user, such as missing email, invalid email format, missing password, password less than 8 characters, and password not meeting the required criteria. 
-      - A test is also included to register a new user successfully. 
-      - Another test checks for duplicate user creation. 
-    
-   2. User Login: 
-      - Similar to user registration, tests are performed to check for errors when logging in a user, such as missing email, invalid email format, missing password, password less than 8 characters, and password not meeting the required criteria. 
-      - A test is also included to check for incorrect password during login. 
-      - Finally, a test verifies successful user login. 
-    
-   3. Session Management: 
-      - Tests are performed to check the functionality of token refresh, accessing a protected route with a valid token, logging out a user, and handling session expiration. 
-   
-   ## auth testing 
-   1.  authenticate  Middleware: 
-      - Tests are performed to check the behavior of the  authenticate  middleware function. 
-      - The middleware is tested for scenarios where no token is provided, an invalid token is provided, an expired token is provided, and a valid token is provided. 
-      - The tests verify the expected status codes, response messages, and whether the  next  function is called appropriately. 
-   
-   2. Helper Functions: 
-      - Tests are performed for several helper functions used in the authentication system. 
-      - The  generateToken  function is tested to ensure it generates a token with a valid payload. 
-      - The  refreshToken  function is tested for scenarios where no token is provided and when a valid token is provided. The tests verify the validity of the returned object, the presence of a new token, and the message indicating a new token was generated. 
-      - The  verifyEmail  function is tested for scenarios where the email is valid, not provided, or invalid. The tests verify the validity of the returned object and the appropriate error messages. 
-      - The  VerifyPassword  function is tested for scenarios where the password is valid, not provided, less than 8 characters, or not strong enough. The tests verify the validity of the returned object and the appropriate error messages. 
-
-
-Overall, the tests provide good coverage of the API endpoints and their expected behavior based on the API documentation.
-## What can be improved:
-      1. custom error handeling class can be defined so we can trow our custom errors and handle them accordingly.
-      2. make a heigher order fuction which will take a function and wrap it with try and catch. this way we don't have to pur try catch in every controller.
-      3. we can add content policy when we deploy to production. so that only scripts which we allow will get to run in production.
-   

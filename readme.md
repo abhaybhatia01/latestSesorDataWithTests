@@ -95,13 +95,10 @@ http:localhost:3000/
 ```sh
 npm run test
 ```
-   ![image](https://github.com/abhaybhatia01/mongoAuth/assets/85993083/89b80fdd-d08f-430a-a198-25558b05fcf3)
-   
-   ![image](https://github.com/abhaybhatia01/mongoAuth/assets/85993083/fdcd3566-6b4f-4580-b535-5beb791a5c90)
-   
+
    
    The tests validate the following aspects mentioned in the API documentation.
-   ## Integration testing 
+   ## user testing 
    1. User Registration: 
       - Tests are performed to check for errors when creating a user, such as missing email, invalid email format, missing password, password less than 8 characters, and password not meeting the required criteria. 
       - A test is also included to register a new user successfully. 
@@ -115,7 +112,7 @@ npm run test
    3. Session Management: 
       - Tests are performed to check the functionality of token refresh, accessing a protected route with a valid token, logging out a user, and handling session expiration. 
    
-   ## Unit testing 
+   ## auth testing 
    1.  authenticate  Middleware: 
       - Tests are performed to check the behavior of the  authenticate  middleware function. 
       - The middleware is tested for scenarios where no token is provided, an invalid token is provided, an expired token is provided, and a valid token is provided. 

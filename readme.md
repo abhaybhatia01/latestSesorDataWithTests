@@ -30,7 +30,7 @@ http:localhost:3000/
 ```
 
    1. Register User:
-      - Endpoint: POST /register
+      - Endpoint: POST users/register
       - Description: Creates a new user account.
       - Request Body:
         - email: string (required) - User's email address.
@@ -43,7 +43,7 @@ http:localhost:3000/
         - 500 Internal Server Error: An unexpected error occurred.
    
    2. Log In User:
-      - Endpoint: POST /login
+      - Endpoint: POST users/login
       - Description: Authenticates a user and creates a session.
       - Request Body:
         - email: string (required) - User's email address.
@@ -55,7 +55,7 @@ http:localhost:3000/
         - 500 Internal Server Error: An unexpected error occurred.
    
    3. Token Refresh:
-      - Endpoint: POST /token-refresh
+      - Endpoint: POST users/token-refresh
       - Description: Refreshes an expired session token.
       - Request Body:
         - oldToken: string (required) - Expired session token.
@@ -65,7 +65,7 @@ http:localhost:3000/
         - 500 Internal Server Error: An unexpected error occurred.
    
    4. Log Out User:
-      - Endpoint: POST /logout
+      - Endpoint: POST users/logout
       - Description: Logs out a user by deleting the session.
       - Request Headers:
         - Authorization: string (required) - Session token.
